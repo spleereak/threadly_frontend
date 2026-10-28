@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Frontend modes
+
+- **Demo mode:** leave `NEXT_PUBLIC_API_BASE_URL` unset or empty. The existing local demonstration workflow and browser-local gallery remain available.
+- **API mode:** set `NEXT_PUBLIC_API_BASE_URL` to the backend base URL before starting Next.js. The frontend uses this configured API and does not switch to Demo mode if the server cannot be reached.
+- Restart the Next.js dev server after changing the variable. For production, rebuild the frontend after changing the URL because `NEXT_PUBLIC_*` values are embedded at build time.
+
+Copy `.env.example` to `.env.local` when you need a local override. Do not place secrets in `NEXT_PUBLIC_*` variables.

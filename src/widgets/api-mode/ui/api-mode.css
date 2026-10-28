@@ -1,0 +1,25 @@
+.api-mode-shell .api-mode-panel { width: min(660px, 100%); margin: 70px auto; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+.api-mode-shell .api-mode-panel h1 { margin: 0; font-size: clamp(27px, 3vw, 36px); font-weight: 500; letter-spacing: -.05em; }
+.api-mode-shell .api-mode-status { display: grid; gap: 0; margin: 24px 0; border-top: 1px solid var(--line); }
+.api-mode-shell .api-mode-status div { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.api-mode-shell .api-mode-status dt { color: var(--ink-faint); }.api-mode-shell .api-mode-status dd { min-width: 0; margin: 0; color: var(--ink); overflow-wrap: anywhere; }
+.api-mode-shell .api-mode-status code { font-size: 11px; }.api-mode-shell .api-mode-error { padding: 12px; border-radius: 6px; background: var(--danger-wash, #fff2f0); color: var(--danger); font-size: 12px; }.api-mode-shell .api-mode-note { margin-bottom: 16px; color: var(--ink-soft); font-size: 12px; }
+@media (max-width: 620px) { .api-mode-shell { padding: 0 18px; }.api-mode-shell .header-note { display: none; }.api-mode-shell .api-mode-panel { margin: 32px auto; padding: 20px; }.api-mode-shell .api-mode-status div { grid-template-columns: 100px minmax(0, 1fr); } }
+.api-mode-connection { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px 16px; padding: 7px max(24px, calc((100vw - 1200px) / 2)); border-bottom: 1px solid var(--line); background: var(--surface-soft); color: var(--ink-soft); font-size: 10px; }
+.api-mode-connection strong { color: var(--accent-strong); letter-spacing: .08em; }
+.api-mode-connection .api-mode-error { color: var(--danger); }
+.api-settings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 14px 0; }
+.api-settings-grid .switch-row { align-self: end; min-height: 41px; }
+.api-operation-error { margin: 10px 0; padding: 11px; border-radius: 6px; background: var(--danger-wash, #fff2f0); color: var(--danger); font-size: 12px; }
+.api-operation-error p { margin: 0 0 8px; }
+.api-task-status { display: grid; gap: 8px; margin-top: 14px; padding: 13px; border: 1px solid var(--line); border-radius: 7px; color: var(--ink-soft); font-size: 12px; }
+.api-task-status strong { color: var(--ink); }
+.api-task-status progress { width: 100%; accent-color: var(--accent-strong); }
+.api-task-status p { margin: 0; line-height: 1.5; }
+.api-gallery-preview img { width: 100%; height: 190px; object-fit: cover; }
+.api-gallery-shell .gallery-actions a { display: inline-flex; min-height: 32px; align-items: center; padding: 0 9px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink-soft); text-decoration: none; font-size: 10px; }
+.api-gallery-shell .gallery-actions button:disabled { opacity: .55; cursor: not-allowed; }
+.api-gallery-shell .gallery-warning { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.api-sketch-source { display: grid; width: min(320px, 100%); gap: 6px; margin: 0 0 16px; color: var(--ink-faint); font-size: 10px; }
+.api-sketch-source img { width: 100%; height: auto; max-height: 220px; object-fit: contain; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); }
+@media (max-width: 620px) { .api-settings-grid { grid-template-columns: 1fr; }.api-mode-connection { justify-content: flex-start; padding: 8px 16px; } }
